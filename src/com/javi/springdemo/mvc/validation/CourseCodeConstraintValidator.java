@@ -22,7 +22,18 @@ public class CourseCodeConstraintValidator
 			) {   
 		
 		//Validation logic. Test if the form data starts with our course prefix
-		boolean result = theCode.startsWith(coursePrefix);
+		boolean result; 
+		
+		if(theCode != null ) { //Need to check for null
+			
+			result = theCode.startsWith(coursePrefix);
+			
+		}
+		
+		else {
+			result = true;
+		}
+		
 		
 		return result;
 	}
